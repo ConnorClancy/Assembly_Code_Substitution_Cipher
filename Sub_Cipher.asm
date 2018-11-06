@@ -1,4 +1,4 @@
-#15528697 Connor Clancy - ecrypted sting: FMWRTSIETDRTW
+#Code encrypts and decrypts the string in the same run to display functionality.
 	.data
 
 encrypted:	.space	200
@@ -86,7 +86,7 @@ cont:	addi $s0, $s0, 64		#places number in ascii range
 
 
 testenc:li $v0, 4			#used to test the output of either subroutine
-	la $t5, encrypted 			#prints to Run I/O screen
+	la $t5, encrypted 		#prints to Run I/O screen
 	add $a0, $t5, $zero
 	syscall
 	la $t5, plain
